@@ -98,11 +98,11 @@ export type AnimationConfig<T extends 'svg' | 'canvas' | 'html' = 'svg'> = {
     }
 }
 
-export type AnimationConfigWithPath = AnimationConfig & {
+export type AnimationConfigWithPath<T> = AnimationConfig<T> & {
     path?: string;
 }
 
-export type AnimationConfigWithData = AnimationConfig & {
+export type AnimationConfigWithData<T> = AnimationConfig<T> & {
     animationData?: any;
 }
 
